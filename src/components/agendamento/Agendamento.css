@@ -1,0 +1,71 @@
+.agendamento-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.agendamento-container h2 {
+  text-align: left;
+  color: #1d4ed8;
+}
+
+.selecao-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selecao-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.selecao-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selecao-card {
+  padding: 10px 16px;
+  border: 2px solid #2563eb;
+  background-color: white;
+  color: #2563eb;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  min-width: 90px;
+  min-height: 50px;
+  text-align: center;
+}
+
+.selecao-card:hover {
+  background: linear-gradient(90deg, #ff00d4, #1d4ed8);
+  color: white;
+}
+
+.selecao-card.selecionado {
+  background-color: #2563eb;
+  color: white;
+  border-color: #1d4ed8;
+}
+
+.selecao-resultado {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #2563eb;
+  text-align: center;
+}
+
+.selecao-resultado strong {
+  color: #1d4ed8;
+}

@@ -1,0 +1,29 @@
+.telefone-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.telefone-container label {
+  font-weight: 600;
+}
+
+.telefone-container input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.telefone-container input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.telefone-erro {
+  color: red;
+  font-size: 0.85rem;
+}
