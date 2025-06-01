@@ -9,9 +9,14 @@ const gerarProximosSeteDias = () => {
   for (let i = 0; i < 7; i++) {
     const data = new Date();
     data.setDate(hoje.getDate() + i);
-
+    // Pula domingo (0) e segunda (1)
+    if (data.getDay() === 0 || data.getDay() === 1) {
+      hoje.setDate(hoje.getDate() + 1);
+      i--;
+      continue;
+    }
     let dia = data.toLocaleDateString("pt-BR", {
-      weekday: "long",
+      weekday: "short",
       day: "2-digit",
       month: "2-digit",
     });

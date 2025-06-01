@@ -7,9 +7,18 @@ import icon from './assets/icon.png';
 import Agendamento from './components/agendamento/Agendamento.js';
 import SelecaoServico from './components/selecaoservico/SelecaoServico.js';
 import TelefoneInput from './components/telefoneinput/TelefoneInput.js';
+import NomeInput from './components/nomeinput/NomeInput.js';
+import React, { useState } from 'react';
 
 
 function App() {
+  const [showHorarios, setShowHorarios] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowHorarios(true);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -27,16 +36,28 @@ function App() {
       <main>
         <section className="agendamento-section">
           <div className="agendamento-card">
-            <form className="booking-form">
-              <div className='Dados'>
-                <label htmlFor="name">Nome:</label>
-                <input type="text" id="name" name="name" required />
-                <TelefoneInput />
-              </div>
-              <Agendamento />
-              <SelecaoServico />
-              <button type="submit">Agendar</button>
-            </form>
+            {!showHorarios ? (
+              <form className="booking-form" onSubmit={handleSubmit}>
+                <div className='Dados'>
+                  <NomeInput />
+                  <TelefoneInput />
+                </div>
+                <SelecaoServico />
+                <button type="submit">Agendar</button>
+              </form>
+            ) : (
+              <form className="horarios-form">
+                <Agendamento />
+                <div className='buttons'>
+                  <button onClick={() => setShowHorarios(false)} className='voltar'>
+                    Voltar
+                  </button>
+                  <button onClick={() => alert('Agendamento confirmado!')} className='confirmar'>
+                    Confirmar Agendamento
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </section>
       </main>

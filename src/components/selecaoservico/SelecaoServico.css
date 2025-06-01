@@ -16,7 +16,7 @@
   flex-wrap: wrap;
 }
 
-.selecao-card {
+.selecao-card-servicos {
   padding: 12px 18px;
   border: 2px solid #2563eb;
   background-color: white;
@@ -35,13 +35,17 @@
   background-repeat: no-repeat;
 }
 
-.selecao-card:hover {
-  background-image: var(--imagem);
+.selecao-card-servicos:hover {
+  background-image: var(--imagem-hover);
   color: white;
   border-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.selecao-card.selecionado {
+
+.selecao-card-servicos.selecionado {
   background-color: #2563eb;
   color: white;
   border-color: #1d4ed8;

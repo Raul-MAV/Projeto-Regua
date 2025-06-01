@@ -43,20 +43,22 @@
   transition: all 0.3s ease;
   font-weight: 500;
   font-size: 0.9rem;
-  min-width: 90px;
-  min-height: 50px;
+  width: 70px;
+  height: 50px;
   text-align: center;
 }
 
 .selecao-card:hover {
-  background: linear-gradient(90deg, #ff00d4, #1d4ed8);
+  background: linear-gradient(60deg, #ff00d4, #1d4ed8) !important;
   color: white;
+  font-weight: bold;
 }
 
 .selecao-card.selecionado {
-  background-color: #2563eb;
+  background: linear-gradient(60deg, #ff00d4, #1d4ed8) !important;
   color: white;
-  border-color: #1d4ed8;
+  border-color: #000000;
+  font-weight: bold;
 }
 
 .selecao-resultado {
