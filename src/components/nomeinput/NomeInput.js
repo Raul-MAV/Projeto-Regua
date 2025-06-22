@@ -1,7 +1,33 @@
 import React, { useState } from "react";
 import "./NomeInput.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import banner from './assets/banner.png';
+import banner2 from './assets/banner2.png';
+import banner3 from './assets/banner3.png';
+
+<section className="carousel-section">
+    <Swiper
+      slidesPerView={1}
+      spaceBetween={10}
+      navigation
+      loop
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
+      style={{ borderRadius: 10 }}
+    >
+      <SwiperSlide>
+        <img src={banner} alt="Banner 1" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={banner2} alt="Banner 2" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={banner3} alt="Banner 3" />
+      </SwiperSlide>
+    </Swiper>
+  </section>
 
 const NomeInput = () => {
+
   const [nome, setNome] = useState("");
   const [erro, setErro] = useState("");
 
@@ -40,5 +66,6 @@ const NomeInput = () => {
     </div>
   );
 };
+
 
 export default NomeInput;

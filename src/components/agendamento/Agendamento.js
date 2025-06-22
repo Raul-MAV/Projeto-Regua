@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Agendamento.css";
+
 
 // Gera os próximos 7 dias
+
 const gerarProximosSeteDias = () => {
   const dias = [];
   const hoje = new Date();
